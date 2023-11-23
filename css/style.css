@@ -1,0 +1,206 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+:root{
+    --bg-color:#191919;
+    --secont-bg-color:#101010;
+    --third-bg-color:#202020;
+    --main-color:#e9204f;
+    --text-color:#fff;
+    --second-color:#e4e4e4;
+    --other-color:#c6c9d8bf;
+    --h1-font:5rem;
+    --h2-font:3.5rem;
+    --p-font:1.1rem;
+}
+body{
+    color:var(--text-color);
+    background-color: var(--bg-color);
+   
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 20px 10%;
+    border-bottom: 1px solid transparent;
+    transition: all ease .50s;
+}
+.logo{
+  font-family: 'Permanent Marker', cursive; 
+  color: var(--main-color);
+  font-size: 5rem;
+}
+#menu{
+  display: flex;  
+}
+#menu a{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin: 0 40px;
+    transition: all ease .40s;
+}
+#menu a:hover{
+    color: var(--main-color);
+    font-size: 1.3rem;
+}
+#menu-icon{
+    font-size: 42px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+section{
+    padding: 120px 20%;
+}
+.home{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(../img/persona1.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.hero-text{
+    color: var(--second-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 15px;
+    word-spacing: 10px;
+}
+.hero-text h1{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h1-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+.hero-text h4{
+    color: var(--second-color);
+    font-size: 25px;
+    font-weight: 600;
+    word-spacing: 15px;
+    margin-bottom: 3.5rem;
+}
+.btn{
+    display: inline-block;
+    padding: 16px 45px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    transition: all ease .50s;
+}
+.btn:hover{
+    transform: translateX(5px);
+    background: transparent;
+}
+header.sticky{
+    padding: 15px 11%;
+    background: #000;
+    border-bottom: 1px solid #4e5055;
+}
+.about{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+}
+.about-text h2{
+    font-family: 'Dosis', sans-serif;
+    font-size: var(--h2-font);
+    color: var(--text-color);
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.about-text h5{
+    font-size: 22px;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+.about-text span{
+    color: var(--main-color);
+}
+.about-text p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 3rem;
+
+}
+
+
+
+@media(max-width:1600px){
+    header{
+        padding: 14px 4%;
+    }
+}
+@media (max-width:1200px){
+    #menu a{
+        margin:  0 20px;
+    }
+    :root{
+        --h1-font:5rem;
+        --h2-font:3.1rem;
+        --p-font:1rem;  
+    }
+    .logo{
+        font-size: 2rem;
+    }     
+}
+@media (max-width:1060px){
+    section{
+        padding: 50px 5%;
+    }
+    :root{
+        --h1-font:4rem;
+        --h2-font:2.5rem;
+        --p-font:0.8rem;  
+    }    
+}
+@media (max-width:870px){
+    #menu-icon{
+        display: block;
+    }
+    #menu{
+        position: absolute;
+        top: -800px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        padding: 20px 0;
+        text-align: left;
+        transition:  all ease 0.50s;
+    }
+    #menu a{
+        display: block;
+        font-size: 22px;
+        padding: 12px 0;
+    }
+    #menu.open{
+        top:100%
+    }
+}
